@@ -1,0 +1,73 @@
+@use 'variables' as v;
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #ccc;
+
+  #container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+    #label_text {
+      font-size: 2rem;
+      color: #05f;
+      font-weight: 900;
+    }
+
+    #date_input {
+      height: 1.5rem;
+      border-radius: 10rem;
+      outline: none;
+      border: none;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 900;
+      background-color: #05f;
+      color: #0f0;
+      transition: all 250ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: #0f0;
+        color: #05f;
+      }
+    }
+
+    #get_date_Btn {
+      height: 2rem;
+      border-radius: 10rem;
+      outline: none;
+      border: none;
+      padding: 1.5rem;
+      font-size: 1.5rem;
+      line-height: 0px;
+      font-weight: 900;
+      background-color: #05f;
+      color: #0f0;
+      transition: all 250ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: #0f0;
+        color: #05f;
+      }
+    }
+
+    #get_result_weeks,
+    #get_result_days,
+    #get_result_hours,
+    #get_result_minutes,
+    #get_result_seconds {
+      font-size: 3rem;
+      font-weight: 900;
+      color: #f00;
+    }
+  }
+}
