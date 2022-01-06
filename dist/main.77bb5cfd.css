@@ -54,6 +54,7 @@ body #container #get_date_Btn:hover {
   background-color: #0f0;
   color: #05f;
 }
+body #container #get_result_weeks,
 body #container #get_result_days,
 body #container #get_result_hours,
 body #container #get_result_minutes,

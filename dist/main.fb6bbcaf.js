@@ -5802,20 +5802,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // const todaysDate = moment().format("YYYY-MM-DD, hh:mm:ss");
 // console.log(todaysDate);
 var dateInput = document.querySelector("#date_input");
-var getDateBtn = document.querySelector("#get_date_Btn"); // const getResultWeeks = document.querySelector("#get_result_weeks");
-
+var getDateBtn = document.querySelector("#get_date_Btn");
+var getResultWeeks = document.querySelector("#get_result_weeks");
 var getResultDays = document.querySelector("#get_result_days");
 var getResultHours = document.querySelector("#get_result_hours");
 var getResultMinutes = document.querySelector("#get_result_minutes");
 var getResultSeconds = document.querySelector("#get_result_seconds");
 
 getDateBtn.onclick = function () {
-  var dayFinder = (0, _moment.default)(dateInput.value); // getResultWeeks.innerHTML =
-  //   dayFinder.diff(moment(), "weeks") === -1 ||
-  //   dayFinder.diff(moment(), "weeks") === 1
-  //     ? `${dayFinder.diff(moment(), "weeks")} week`
-  //     : `${dayFinder.diff(moment(), "weeks")} weeks`;
-
+  var dayFinder = (0, _moment.default)(dateInput.value);
+  getResultWeeks.innerHTML = dayFinder.diff((0, _moment.default)(), "weeks") === -1 || dayFinder.diff((0, _moment.default)(), "weeks") === 1 ? "".concat(dayFinder.diff((0, _moment.default)(), "weeks"), " week") : "".concat(dayFinder.diff((0, _moment.default)(), "weeks"), " weeks");
   getResultDays.innerHTML = dayFinder.diff((0, _moment.default)(), "days") % 7 === -1 || dayFinder.diff((0, _moment.default)(), "days") % 7 === 1 ? "".concat(dayFinder.diff((0, _moment.default)(), "days") % 7, " day") : "".concat(dayFinder.diff((0, _moment.default)(), "days") % 7, " days");
   getResultHours.innerHTML = dayFinder.diff((0, _moment.default)(), "hours") % 24 === -1 || dayFinder.diff((0, _moment.default)(), "hours") % 24 === 1 ? "".concat(dayFinder.diff((0, _moment.default)(), "hours") % 24, " hour") : "".concat(dayFinder.diff((0, _moment.default)(), "hours") % 24, " hours");
   getResultMinutes.innerHTML = dayFinder.diff((0, _moment.default)(), "minutes") % 60 === -1 || dayFinder.diff((0, _moment.default)(), "minutes") % 60 === 1 ? "".concat(dayFinder.diff((0, _moment.default)(), "minutes") % 60, " minute") : "".concat(dayFinder.diff((0, _moment.default)(), "minutes") % 60, " minutes");
