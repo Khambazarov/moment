@@ -5798,17 +5798,24 @@ var _moment = _interopRequireDefault(require("moment"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// const moment = require("moment");
+// const todaysDate = moment().format("YYYY-MM-DD, hh:mm:ss");
+// console.log(todaysDate);
 var dateInput = document.querySelector("#date_input");
-var getDateBtn = document.querySelector("#get_date_Btn");
-var getResultWeeks = document.querySelector("#get_result_weeks");
+var getDateBtn = document.querySelector("#get_date_Btn"); // const getResultWeeks = document.querySelector("#get_result_weeks");
+
 var getResultDays = document.querySelector("#get_result_days");
 var getResultHours = document.querySelector("#get_result_hours");
 var getResultMinutes = document.querySelector("#get_result_minutes");
 var getResultSeconds = document.querySelector("#get_result_seconds");
 
 getDateBtn.onclick = function () {
-  var dayFinder = (0, _moment.default)(dateInput.value);
-  getResultWeeks.innerHTML = dayFinder.diff((0, _moment.default)(), "weeks") === -1 || dayFinder.diff((0, _moment.default)(), "weeks") === 1 ? "".concat(dayFinder.diff((0, _moment.default)(), "weeks"), " week") : "".concat(dayFinder.diff((0, _moment.default)(), "weeks"), " weeks");
+  var dayFinder = (0, _moment.default)(dateInput.value); // getResultWeeks.innerHTML =
+  //   dayFinder.diff(moment(), "weeks") === -1 ||
+  //   dayFinder.diff(moment(), "weeks") === 1
+  //     ? `${dayFinder.diff(moment(), "weeks")} week`
+  //     : `${dayFinder.diff(moment(), "weeks")} weeks`;
+
   getResultDays.innerHTML = dayFinder.diff((0, _moment.default)(), "days") % 7 === -1 || dayFinder.diff((0, _moment.default)(), "days") % 7 === 1 ? "".concat(dayFinder.diff((0, _moment.default)(), "days") % 7, " day") : "".concat(dayFinder.diff((0, _moment.default)(), "days") % 7, " days");
   getResultHours.innerHTML = dayFinder.diff((0, _moment.default)(), "hours") % 24 === -1 || dayFinder.diff((0, _moment.default)(), "hours") % 24 === 1 ? "".concat(dayFinder.diff((0, _moment.default)(), "hours") % 24, " hour") : "".concat(dayFinder.diff((0, _moment.default)(), "hours") % 24, " hours");
   getResultMinutes.innerHTML = dayFinder.diff((0, _moment.default)(), "minutes") % 60 === -1 || dayFinder.diff((0, _moment.default)(), "minutes") % 60 === 1 ? "".concat(dayFinder.diff((0, _moment.default)(), "minutes") % 60, " minute") : "".concat(dayFinder.diff((0, _moment.default)(), "minutes") % 60, " minutes");
@@ -5842,7 +5849,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "37153" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45969" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
